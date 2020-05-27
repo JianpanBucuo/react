@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
 import TodoItem from './todoitem'
-import LoginControll from './login'
+import App from './app'
 import './style.css'
+import Axios from "axios";
 class TodoList extends Component {
     constructor(props){
         super(props)
@@ -56,6 +57,14 @@ class TodoList extends Component {
     componentWillMount() {
     }
     componentDidMount() {
+        Axios.get('/list.json').then((res) => {
+            console.log(res.data)
+            this.setState(() => {
+                return {
+                    list:res.data
+                }
+            })
+        })
     }
 
     shouldComponentUpdate() {
@@ -68,7 +77,6 @@ class TodoList extends Component {
     render() {
         return (
             <Fragment>
-                <LoginControll />
                 <h3>TodoList</h3>
                 {
                     /* 

@@ -56,3 +56,7 @@ componentWillReceiveProps
 3. 当子组件已经存在于父组件当中componentWillReceiveProps会执行
 
 shouldComponentUpdate 将新传入的props和之前的props相比较，如果值不同则更新子组件 值相同则不更新（性能优化点）
+
+redux
+
+Redux = Reducer + Flux
