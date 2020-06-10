@@ -3,9 +3,11 @@ import TodoItem from './todoitem'
 import App from './app'
 import './style.css'
 import Axios from "axios";
+import store from './store/index'
 class TodoList extends Component {
     constructor(props){
         super(props)
+        console.log(store.getState())
         // 当组件的state和prop发生改变的时候，render函数将会重新执行
         this.state = {
             inputValue:'hello',

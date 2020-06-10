@@ -3,30 +3,25 @@ import { Input } from 'antd';
 import { Button } from 'antd'
 import { List, Avatar } from 'antd';
 import 'antd/dist/antd.css'
-const data = [
-    {
-      title: 'Ant Design Title 1',
-    },
-    {
-      title: 'Ant Design Title 2',
-    },
-    {
-      title: 'Ant Design Title 3',
-    },
-    {
-      title: 'Ant Design Title 4',
-    },
-  ];
+import store from '../store/index'
+import Game from '../offical/Game'
+ 
 class TodoList extends Component {
+    constructor(props) {
+        super(props)
+        this.state = store.getState()
+        console.log(this.state)
+    }
     render() {
         return (
             <div>
-                <Input  placeholder='todo info' style={{width:'300px',marginTop:'30px', marginRight:'30px'}} />
+                <Game ></Game>
+                <Input  value={this.state.inputValue} placeholder='todo info' style={{width:'300px',marginTop:'30px', marginRight:'30px'}} />
                 <Button type="primary">提交</Button>
                 <List
                     style={{marginTop:'30px',width:'300px'}}
                     itemLayout="horizontal"
-                    dataSource={data}
+                    dataSource={this.state.list}
                     renderItem={item => (
                     <List.Item>
                         <List.Item.Meta
