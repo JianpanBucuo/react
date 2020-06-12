@@ -1,6 +1,6 @@
 const defaultState = {
     inputValue: '111',
-    list:['store item']
+    list: ['store item']
 }
 export default (state = defaultState, action) => {
 

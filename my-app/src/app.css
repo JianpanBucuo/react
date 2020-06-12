@@ -3,35 +3,42 @@
     /* transition: all .3s; */
     animation: showItem 2s ease-in forwards;
 }
-.hide{
+
+.hide {
     animation: hideItem 2s ease-in forwards;
     /* opacity: 0; */
 }
+
 @keyframes hideItem {
-    0%{
+    0% {
         opacity: 1;
         color: red;
     }
-    50%{
+
+    50% {
         opacity: .5;
         color: aqua
     }
-    100%{
+
+    100% {
         opacity: 0;
-        color: blue 
+        color: blue
     }
 }
+
 @keyframes showItem {
-    0%{
+    0% {
         opacity: 0;
         color: red;
     }
-    50%{
+
+    50% {
         opacity: .5;
         color: aqua
     }
-    100%{
+
+    100% {
         opacity: 1;
-        color: blue 
+        color: blue
     }
 }
