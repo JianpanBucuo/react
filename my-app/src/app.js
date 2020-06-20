@@ -1,4 +1,4 @@
-import React,{Component,Fragment} from 'react'
+import React, { Component, Fragment } from 'react'
 import './app.css'
 class App extends Component {
     constructor(props) {
@@ -8,18 +8,18 @@ class App extends Component {
         }
         this.handleToggle = this.handleToggle.bind(this)
     }
-    handleToggle() {
+    handleToggle () {
         this.setState({
             show: !this.state.show
         })
     }
-    render() {
+    render () {
         return (
             <Fragment>
-                 <div className={this.state.show ? 'show' :'hide'}>hello</div>
-                <button onClick={this.handleToggle}>toggle</button>  
+                <div className={this.state.show ? 'show' : 'hide'}>hello</div>
+                <button onClick={this.handleToggle}>toggle</button>
             </Fragment>
-           
+
         )
     }
 

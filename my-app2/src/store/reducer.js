@@ -1,10 +1,9 @@
-import { CHANGE_INPUT_VALUE, ADD_TODO_ITEM, DELETE_TODO_ITEM } from './actionTypes'
+import { CHANGE_INPUT_VALUE, ADD_TODO_ITEM, DELETE_TODO_ITEM, INIT_LIST } from './actionTypes'
 const defaultState = {
     inputValue: '',
     list: ['1111']
 }
 export default (state = defaultState, action) => {
-    console.log(state, action)
     if (action.type === CHANGE_INPUT_VALUE) {
         const newState = JSON.parse(JSON.stringify(state))
         newState.inputValue = action.value
@@ -20,6 +19,11 @@ export default (state = defaultState, action) => {
     if (action.type === DELETE_TODO_ITEM) {
         const newState = Object.assign({}, state)
         newState.list.splice(action.index, 1)
+        return newState
+    }
+    if (action.type === INIT_LIST) {
+        const newState = Object.assign({}, state)
+        newState.list = action.data
         return newState
     }
     return state

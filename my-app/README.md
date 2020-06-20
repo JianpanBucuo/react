@@ -20,7 +20,7 @@ diff算法
 1. 虚拟DOM逐层比较，一层不相等，则不会去比较下面的节点
 2. 在循环列表时不用index作为key值使因为，当我们操作列表中其中的元素时，所有的key值将会发生改变，破坏了虚拟DOM key值一一对应的关系， 导致新的DOM和原始DOM相比较时耗费的性能增加
 
-生命周期函数
+##　生命周期函数
 - 是指某一时刻组件会自动调用执行的函数
 
 
@@ -60,3 +60,15 @@ shouldComponentUpdate 将新传入的props和之前的props相比较，如果值
 redux
 
 Redux = Reducer + Flux
+
+
+
+## Store原则
+1. store是唯一的
+2. 只有store可以改变自己的内容
+3. reducer是一个纯函数（给定固定的输入，就一定会有固定的输出，而且不会有任何的副作用）
+### store API
+1. createStore 创建store
+2. store.dispatch 派发action
+3. store.getState 获取当前store内容
+4. store.subscribe(callback) 订阅store的改变，会触发回调
