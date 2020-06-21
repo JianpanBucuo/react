@@ -18,3 +18,22 @@ store/index 增加中间件
 ## redux中间件
 
 ## redux-saga
+
+## react-redux
+
+1. provider
+```jsx
+import {Provider} from 'react-redux'
+import store from './store'
+const App = (
+    <Provider store={store}>
+        <AntTodoList></AntTodoList>
+    </Provider>
+)
+ReactDOM.render(
+    App,
+    document.getElementById('root')
+);
+
+```
+Provider内部的组件都有能力获取store内部的数据

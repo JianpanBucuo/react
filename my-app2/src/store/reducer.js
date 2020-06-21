@@ -1,6 +1,6 @@
 import { CHANGE_INPUT_VALUE, ADD_TODO_ITEM, DELETE_TODO_ITEM, INIT_LIST } from './actionTypes'
 const defaultState = {
-    inputValue: '',
+    inputValue: '11',
     list: ['1111']
 }
 export default (state = defaultState, action) => {
