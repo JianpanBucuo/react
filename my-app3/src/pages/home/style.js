@@ -20,3 +20,14 @@ export const HomeLeft = styled.div`
 export const HomeRight = styled.div`
 width:240px;
 `
+export const BackTop = styled.div`
+    position:fixed;
+    width:100px;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    border:1px solid #ccc;
+    right:30px;
+    bottom:30px;
+    font-size:16px;
+`

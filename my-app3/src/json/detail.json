@@ -1,0 +1,7 @@
+{
+    "code": "0000",
+    "data": {
+        "title": "浮生六记：想把我一生的温柔都说与你听",
+        "content": "<img src='https://upload-images.jianshu.io/upload_images/7042805-3119ddc0df3451fb?imageMogr2/auto-orient/strip|imageView2/2/w/691/format/webp' alt=''></img><p>对于我们的业务场景来说，hash模式不能保证历史链接的可用性，多页/ 跳转都是以牺牲一定体验性为代价。经过多番尝试，最后发现用下面的方法勉强解决了问题</p>"
+    }
+}

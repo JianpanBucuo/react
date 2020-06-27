@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.div`
     position:relative;
 `
 
-export const Logo = styled.a`
+export const Logo = styled.div`
     width:176px;
     height:50px;
     position: absolute;

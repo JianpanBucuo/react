@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import { HeaderWrapper, Logo, Nav, NavItem, NavSearch, Addition, Button, SearchInfo, SearchInfoSwitch, SearchInfoTitle, SearchInfoItem } from './style'
 import { connect } from 'react-redux'
 import { changeSearchFocusedAction, getList, mouseEnterAction, mouseLeaveAction, changePageAction } from '../../store/header/actionCreator'
-
-class Header extends Component {
+import { Link } from 'react-router-dom'
+class Header extends PureComponent {
     getListArea () {
         const { focused, mouseIn, list, totalPage, page, handleMouseEnter, handleMouseLeave, hanleChangePage } = this.props
         const pageList = []
@@ -43,7 +43,9 @@ class Header extends Component {
         return (
             <Fragment>
                 <HeaderWrapper>
-                    <Logo href="/"></Logo>
+                    <Link to='/'>
+                        <Logo />
+                    </Link>
                     <Nav >
                         <NavItem className='left active'>首页</NavItem>
                         <NavItem className='left'>下载App</NavItem>

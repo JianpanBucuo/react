@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { ToipicWrapper, TopicItem } from './style'
-class Topic extends Component {
+class Topic extends PureComponent {
 
     getItem () {
         const { topicList } = this.props
