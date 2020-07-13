@@ -7,7 +7,6 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './pages/home/index'
 import Detail from './pages/detail/loadable'
-// import Detail from './pages/detail/index'
 class App extends PureComponent {
     render () {
         return (
@@ -17,7 +16,9 @@ class App extends PureComponent {
                 <Provider store={Store}>
                     <BrowserRouter>
                         <Header></Header>
-                        <Route path='/' exact component={Home}></Route>
+                        <Route path='/' exact  >
+                            <Home></Home>
+                        </Route>
                         <Route path='/detail/:id' component={Detail}></Route>
                     </BrowserRouter>
                 </Provider>
