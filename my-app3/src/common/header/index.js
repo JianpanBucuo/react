@@ -1,5 +1,9 @@
 import React, { PureComponent, Fragment } from 'react'
-import { HeaderWrapper, Logo, Nav, NavItem, NavSearch, Addition, Button, SearchInfo, SearchInfoSwitch, SearchInfoTitle, SearchInfoItem } from './style'
+import {
+    HeaderWrapper, Logo, Nav, NavItem, NavSearch, Addition,
+    // Button
+    SearchInfo, SearchInfoSwitch, SearchInfoTitle, SearchInfoItem
+} from './style'
 import { connect } from 'react-redux'
 import { changeSearchFocusedAction, getList, mouseEnterAction, mouseLeaveAction, changePageAction } from '../../store/header/actionCreator'
 import { Link } from 'react-router-dom'
@@ -47,22 +51,22 @@ class Header extends PureComponent {
                         <Logo />
                     </Link>
                     <Nav >
-                        <NavItem className='left active'>首页</NavItem>
-                        <NavItem className='left'>下载App</NavItem>
-                        <NavItem className='right'>登录</NavItem>
-                        <NavItem className='right'>Aa</NavItem>
+                        {/* <NavItem className='left active'>首页</NavItem> */}
+                        {/* <NavItem className='left'>下载App</NavItem> */}
+                        {/* <NavItem className='right'>登录</NavItem>
+                        <NavItem className='right'>Aa</NavItem> */}
                         <div className='nav-container' style={{ position: 'relative' }}>
-                            <NavSearch
+                            {/* <NavSearch
                                 className={focused ? 'focused' : ''}
                                 onFocus={() => handleSearchValueTrue(list)}
                                 onBlur={handleSearchValueFalse}
                             >
-                            </NavSearch>
+                            </NavSearch> */}
                             {this.getListArea()}
                         </div>
                         <Addition>
-                            <Button className='writting'>写文章</Button>
-                            <Button className='reg'>注册</Button>
+                            {/* <Button className='writting'>写文章</Button>
+                            <Button className='reg'>注册</Button> */}
                         </Addition>
                     </Nav>
                 </HeaderWrapper>
