@@ -8,6 +8,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './pages/home/index'
 import Detail from './pages/detail/loadable'
 import Demo from './pages/demo/Game'
+import Parent from './pages/hashRouter/demo'
 class App extends PureComponent {
     render () {
         return (
@@ -22,6 +23,7 @@ class App extends PureComponent {
                         </Route>
                         <Route path='/detail/:id' component={Detail}></Route>
                         <Route path='/demo' component={Demo}></Route>
+                        <Route path='/parent' component={Parent}></Route>
                     </BrowserRouter>
                 </Provider>
             </Fragment>
